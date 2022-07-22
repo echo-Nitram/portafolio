@@ -1,0 +1,41 @@
+.navbar-collapse {
+  text-align: center;
+  justify-content: center;
+}
+.navbar-collapse ul {
+  width: 33%;
+}
+.navbar-collapse .navbar-nav-a {
+  justify-content: flex-end;
+}
+.navbar-collapse .nav-name {
+  width: 20rem;
+  margin: 10px;
+  color: hsl(200deg, 50%, 90%);
+}
+.navbar-collapse a {
+  padding: 5px;
+  margin: 5px;
+  color: hsl(200deg, 50%, 90%);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-name-fond {
+  position: absolute;
+  width: 20rem;
+  top: 0px;
+  z-index: -1;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-top: 100px solid hsl(200deg, 50%, 0%);
+  -webkit-box-shadow: 0px 10px 13px -7px #df0000, 0px 10px 10px 0px rgba(255, 255, 255, 0);
+  box-shadow: 0px 10px 13px -7px #b00000, 0px 10px 10px 0px rgba(255, 255, 255, 0);
+}
+
+.bodyBK {
+  background-color: hsl(200deg, 50%, 10%);
+}
+
+/*# sourceMappingURL=style.css.map */
