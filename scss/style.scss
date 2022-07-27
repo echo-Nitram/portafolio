@@ -1,48 +1,305 @@
 
-.navbar-collapse{
-    text-align: center;
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
-    ul{
-        width: 33%;
+
+.bodyBK{
+    background-color: hsl(200, 50%, 10%);
+}
+
+.nav-style{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    margin-left: -50%;
+
+    .navbar-collapse{
+        text-align: center;
+        justify-content: center;
+
+        ul{
+            width: 33%;
+            a{
+                padding: 5px;
+                margin: 5px;
+                color:hsl(200, 50%, 90%);
+                text-decoration: none;
+            }
+        }
+
+        .navbar-nav-a{
+            justify-content: flex-end;
+        }
+
+        .nav-name{
+            width: 20rem;
+            margin: 10px;
+            color: hsl(200, 50%, 90%);
+
+            .nav-name-fond{
+                position: absolute;
+                width: 20rem;
+                top: 0px;
+                z-index: -1;
+                
+                height: 0px;
+                border-right: 60px solid transparent;
+                border-left: 60px solid transparent;
+                border-top: 100px solid hsl(200, 50%, 0%);
+            }
+        }
+
+        
     }
 
-    .navbar-nav-a{
-        justify-content: flex-end;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        width:40px;
+        height:40px;
+
+        span{
+            display: inline-block;
+            width: 100%;
+            height: 4px;
+            background: #fff;
+        }
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    width:100%;
+    height:100vh; 
+
+    .div-tags{
+        padding-top: 7rem;
+        
+        span{
+            display: block;
+            color: hsl(200, 50%, 30%);
+        }
+
+        .tab-tags{
+            padding-left: 2rem;
+        }
     }
 
-    .nav-name{
-        width: 20rem;
-        margin: 10px;
+    .div-text{
+        padding: 2rem;
         color: hsl(200, 50%, 90%);
+        font-size: 20px;
+        font-family: 'PT Sans Narrow', sans-serif;
+
+        h1{
+            font-size: 80px;
+            font-family: 'Oswald', sans-serif;
+
+            &:before {
+                content: '<h1>';
+                display: block;
+                color: hsl(200, 50%, 30%);
+                font-size: 16px;
+            }
+            
+            &:after {
+                content: '</h1>';
+                color: hsl(200, 50%, 30%);
+                font-size: 16px;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            padding: 10px 25px;
+            color: hsl(200, 50%, 30%);
+            border: solid 1px hsl(200, 50%, 30%);
+            border-radius: 0px;
+
+            &:hover{
+                color:hsl(200, 50%, 90%);
+                background-color: hsl(200, 50%, 30%);
+            }
+        }
+
+        p:before {
+            content: '<p>';
+            display: block;
+            color: hsl(200, 50%, 30%);
+            font-size: 16px;
+        }
+        
+        p:after {
+            content: '</p>';
+            display: block;
+            color: hsl(200, 50%, 30%);
+            font-size: 16px;
+        }
+
+    }
+
+    .div-scroll{
+        position: absolute;
+        bottom: 0px;
+        margin: 2rem;
+        color: white;
+        font-size: 20px;
+        transform: rotate(90deg);
+        right: 0px;
+    }
+}
+
+.portafolio{
+    padding-left: 4rem;
+    color: hsl(200, 50%, 90%);
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-right: 2rem;
+
+    p:before {
+        content: '<p>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    p:after {
+        content: '</p>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    h2:before {
+        content: '<h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    h2:after {
+        content: '</h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+
+    .div-but{
+        display: flex;
+        justify-content: end;
     }
 
     a{
-        padding: 5px;
-        margin: 5px;
-
-        color:hsl(200, 50%, 90%);
-        font-size: 20px;
         text-decoration: none;
+        padding: 10px 25px;
+        
+        color: hsl(200, 50%, 30%);
+        border: solid 1px hsl(200, 50%, 30%);
+        border-radius: 0px;
+
+        &:hover{
+            color:hsl(200, 50%, 90%);
+            background-color: hsl(200, 50%, 30%);
+        }
+    }
+
+    section{
+        .col{
+            padding: 0px;
+            margin: 0px;
+        }
+        article{
+            width: auto;
+            min-height: 200px;
+            max-height: 400px;
+            background-color: aqua;
+            border: solid 1px black;
+        }
+    }
+
+    span{
+        display: block;
+        font-size: 20px;
+        color: hsl(200, 50%, 30%);
     }
 
 }
 
-.nav-name-fond{
-    position: absolute;
-    width: 20rem;
-    top: 0px;
-    z-index: -1;
-    
-    height: 0px;
-    border-right: 60px solid transparent;
-    border-left: 60px solid transparent;
-    border-top: 100px solid hsl(200, 50%, 0%);
+.blog{
 
-    -webkit-box-shadow: 0px 10px 13px -7px #df0000, 0px 10px 10px 0px rgba(255, 255, 255, 0); 
-    box-shadow: 0px 10px 13px -7px #b00000, 0px 10px 10px 0px rgba(255, 255, 255, 0);
+    padding-left: 2rem;
+
+    h2{
+        position: absolute;
+        font-size: 25rem;
+        color:hsl(200, 50%, 15%);
+    }
+
+    div{
+        padding-left: 3rem;
+        position: relative;
+        top: 20rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article{
+        width: 300px;
+        height: 300px;
+
+        background-color: aqua;
+    }
 }
 
-.bodyBK{
-    background-color: hsl(200, 50%, 10%)
+.contactame{
+    
+
+    padding-left: 4rem;
+    color: hsl(200, 50%, 90%);
+    font-size: 20px;
+    margin-right: 2rem;
+    
+
+    h2:before {
+        content: '<h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    h2:after {
+        content: '</h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+}
+
+
+// span{
+//     font-family: 'Nanum Gothic Coding', monospace;
+// }
+
+
+p{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+a{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
 }

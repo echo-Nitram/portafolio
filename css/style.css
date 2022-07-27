@@ -1,27 +1,38 @@
-.navbar-collapse {
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+.bodyBK {
+  background-color: hsl(200deg, 50%, 10%);
+}
+
+.nav-style {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  margin-left: -50%;
+}
+.nav-style .navbar-collapse {
   text-align: center;
   justify-content: center;
 }
-.navbar-collapse ul {
+.nav-style .navbar-collapse ul {
   width: 33%;
 }
-.navbar-collapse .navbar-nav-a {
+.nav-style .navbar-collapse ul a {
+  padding: 5px;
+  margin: 5px;
+  color: hsl(200deg, 50%, 90%);
+  text-decoration: none;
+}
+.nav-style .navbar-collapse .navbar-nav-a {
   justify-content: flex-end;
 }
-.navbar-collapse .nav-name {
+.nav-style .navbar-collapse .nav-name {
   width: 20rem;
   margin: 10px;
   color: hsl(200deg, 50%, 90%);
 }
-.navbar-collapse a {
-  padding: 5px;
-  margin: 5px;
-  color: hsl(200deg, 50%, 90%);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.nav-name-fond {
+.nav-style .navbar-collapse .nav-name .nav-name-fond {
   position: absolute;
   width: 20rem;
   top: 0px;
@@ -30,12 +41,210 @@
   border-right: 60px solid transparent;
   border-left: 60px solid transparent;
   border-top: 100px solid hsl(200deg, 50%, 0%);
-  -webkit-box-shadow: 0px 10px 13px -7px #df0000, 0px 10px 10px 0px rgba(255, 255, 255, 0);
-  box-shadow: 0px 10px 13px -7px #b00000, 0px 10px 10px 0px rgba(255, 255, 255, 0);
+}
+.nav-style .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+}
+.nav-style .menu span {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
 }
 
-.bodyBK {
-  background-color: hsl(200deg, 50%, 10%);
+header {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100vh;
+}
+header .div-tags {
+  padding-top: 7rem;
+}
+header .div-tags span {
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+}
+header .div-tags .tab-tags {
+  padding-left: 2rem;
+}
+header .div-text {
+  padding: 2rem;
+  color: hsl(200deg, 50%, 90%);
+  font-size: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+header .div-text h1 {
+  font-size: 80px;
+  font-family: "Oswald", sans-serif;
+}
+header .div-text h1:before {
+  content: "<h1>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+header .div-text h1:after {
+  content: "</h1>";
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+header .div-text a {
+  text-decoration: none;
+  padding: 10px 25px;
+  color: hsl(200deg, 50%, 30%);
+  border: solid 1px hsl(200deg, 50%, 30%);
+  border-radius: 0px;
+}
+header .div-text a:hover {
+  color: hsl(200deg, 50%, 90%);
+  background-color: hsl(200deg, 50%, 30%);
+}
+header .div-text p:before {
+  content: "<p>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+header .div-text p:after {
+  content: "</p>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+header .div-scroll {
+  position: absolute;
+  bottom: 0px;
+  margin: 2rem;
+  color: white;
+  font-size: 20px;
+  transform: rotate(90deg);
+  right: 0px;
+}
+
+.portafolio {
+  padding-left: 4rem;
+  color: hsl(200deg, 50%, 90%);
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  margin-right: 2rem;
+}
+.portafolio p:before {
+  content: "<p>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+.portafolio p:after {
+  content: "</p>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+.portafolio h2:before {
+  content: "<h2>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+.portafolio h2:after {
+  content: "</h2>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+.portafolio .div-but {
+  display: flex;
+  justify-content: end;
+}
+.portafolio a {
+  text-decoration: none;
+  padding: 10px 25px;
+  color: hsl(200deg, 50%, 30%);
+  border: solid 1px hsl(200deg, 50%, 30%);
+  border-radius: 0px;
+}
+.portafolio a:hover {
+  color: hsl(200deg, 50%, 90%);
+  background-color: hsl(200deg, 50%, 30%);
+}
+.portafolio section .col {
+  padding: 0px;
+  margin: 0px;
+}
+.portafolio section article {
+  width: auto;
+  min-height: 200px;
+  max-height: 400px;
+  background-color: aqua;
+  border: solid 1px black;
+}
+.portafolio span {
+  display: block;
+  font-size: 20px;
+  color: hsl(200deg, 50%, 30%);
+}
+
+.blog {
+  padding-left: 2rem;
+}
+.blog h2 {
+  position: absolute;
+  font-size: 25rem;
+  color: hsl(200deg, 50%, 15%);
+}
+.blog div {
+  padding-left: 3rem;
+  position: relative;
+  top: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.blog article {
+  width: 300px;
+  height: 300px;
+  background-color: aqua;
+}
+
+.contactame {
+  padding-left: 4rem;
+  color: hsl(200deg, 50%, 90%);
+  font-size: 20px;
+  margin-right: 2rem;
+}
+.contactame h2:before {
+  content: "<h2>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+.contactame h2:after {
+  content: "</h2>";
+  display: block;
+  color: hsl(200deg, 50%, 30%);
+  font-size: 16px;
+}
+
+p {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+a {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
