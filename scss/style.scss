@@ -1,9 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
-
-
 .bodyBK{
     background-color: hsl(200, 50%, 10%);
 }
@@ -11,36 +6,55 @@
 .nav-style{
     position: fixed;
     width: 100%;
-    height: auto;
-    left: 50%;
-    margin-left: -50%;
 
-    .navbar-collapse{
-        text-align: center;
+    .navbar{
+        display: flex;
         justify-content: center;
+        align-items: center;
+        width: 100%;
 
         ul{
-            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            width: 30%;
+            list-style-type: none;
+            gap: 1rem;
+
+            margin: 0px;
+            padding: 0px;
+
+            animation: mianimacion1 2s;
+            
+
             a{
-                padding: 5px;
-                margin: 5px;
                 color:hsl(200, 50%, 90%);
                 text-decoration: none;
             }
         }
 
-        .navbar-nav-a{
-            justify-content: flex-end;
+        .izquierda{
+            justify-content: end;
+        }
+        .derecha{
+            justify-content: start;
+            animation: mianimacion2 2s;
+            
         }
 
         .nav-name{
-            width: 20rem;
-            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 15rem;
             color: hsl(200, 50%, 90%);
-
+            
             .nav-name-fond{
                 position: absolute;
-                width: 20rem;
+                width: 15rem;
                 top: 0px;
                 z-index: -1;
                 
@@ -48,168 +62,116 @@
                 border-right: 60px solid transparent;
                 border-left: 60px solid transparent;
                 border-top: 100px solid hsl(200, 50%, 0%);
+            
+                animation: mianimacion 1s;
             }
+
+            h2, p{
+                animation: mianimacion 1s;
+            }
+            
         }
 
-        
+    }
+}
+
+@keyframes mianimacion {
+    0%{
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes mianimacion1 {
+    0%{
+        transform: translateX(-150%);
     }
 
-    .menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    
-        width:40px;
-        height:40px;
+    100%{
+        transform: translateX(0%);
+    }
+}
 
-        span{
-            display: inline-block;
-            width: 100%;
-            height: 4px;
-            background: #fff;
-        }
+@keyframes mianimacion2 {
+    0%{
+        transform: translateX(150%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.container-html-tags{
+    padding-top: 7rem;
+    padding-left: 2rem;
+    overflow: hidden;
+
+    &:before {
+        content: '<html>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+    }
+    
+    &:after {
+        content: '</html>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+    }
+}
+
+.container-body-tags{
+    padding-left: 2rem;
+
+    &:before {
+        content: '<body>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+    }
+    
+    &:after {
+        content: '</body>';
+        display: block;
+        color: hsl(200, 50%, 30%);
     }
 }
 
 header{
     display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
     width:100%;
-    height:100vh; 
-
-    .div-tags{
-        padding-top: 7rem;
-        
-        span{
-            display: block;
-            color: hsl(200, 50%, 30%);
-        }
-
-        .tab-tags{
-            padding-left: 2rem;
-        }
-    }
+    height:80vh; 
 
     .div-text{
-        padding: 2rem;
-        color: hsl(200, 50%, 90%);
-        font-size: 20px;
-        font-family: 'PT Sans Narrow', sans-serif;
-
-        h1{
-            font-size: 80px;
-            font-family: 'Oswald', sans-serif;
-
-            &:before {
-                content: '<h1>';
-                display: block;
-                color: hsl(200, 50%, 30%);
-                font-size: 16px;
-            }
-            
-            &:after {
-                content: '</h1>';
-                color: hsl(200, 50%, 30%);
-                font-size: 16px;
-            }
-        }
-
-        a{
-            text-decoration: none;
-            padding: 10px 25px;
-            color: hsl(200, 50%, 30%);
-            border: solid 1px hsl(200, 50%, 30%);
-            border-radius: 0px;
-
-            &:hover{
-                color:hsl(200, 50%, 90%);
-                background-color: hsl(200, 50%, 30%);
-            }
-        }
-
-        p:before {
-            content: '<p>';
-            display: block;
-            color: hsl(200, 50%, 30%);
-            font-size: 16px;
-        }
-        
-        p:after {
-            content: '</p>';
-            display: block;
-            color: hsl(200, 50%, 30%);
-            font-size: 16px;
-        }
-
+        padding: 0rem 2rem;
     }
 
     .div-scroll{
+        display: flex;
+        justify-content: space-around;
         position: absolute;
-        bottom: 0px;
-        margin: 2rem;
-        color: white;
-        font-size: 20px;
-        transform: rotate(90deg);
-        right: 0px;
+        bottom: 40px;
+        width: 90%;
+        
+        color: hsl(200, 50%, 90%);
+
+        span{
+            transform: rotate(90deg); 
+        }
+        
     }
 }
 
-.portafolio{
-    padding-left: 4rem;
-    color: hsl(200, 50%, 90%);
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    margin-right: 2rem;
 
-    p:before {
-        content: '<p>';
-        display: block;
-        color: hsl(200, 50%, 30%);
-        font-size: 16px;
-    }
-    
-    p:after {
-        content: '</p>';
-        display: block;
-        color: hsl(200, 50%, 30%);
-        font-size: 16px;
-    }
-    
-    h2:before {
-        content: '<h2>';
-        display: block;
-        color: hsl(200, 50%, 30%);
-        font-size: 16px;
-    }
-    
-    h2:after {
-        content: '</h2>';
-        display: block;
-        color: hsl(200, 50%, 30%);
-        font-size: 16px;
-    }
+
+//---------------------------------
+.portafolio{
 
     .div-but{
         display: flex;
         justify-content: end;
     }
 
-    a{
-        text-decoration: none;
-        padding: 10px 25px;
-        
-        color: hsl(200, 50%, 30%);
-        border: solid 1px hsl(200, 50%, 30%);
-        border-radius: 0px;
-
-        &:hover{
-            color:hsl(200, 50%, 90%);
-            background-color: hsl(200, 50%, 30%);
-        }
-    }
-
     section{
+        margin: 10px 0;
         .col{
             padding: 0px;
             margin: 0px;
@@ -221,12 +183,6 @@ header{
             background-color: aqua;
             border: solid 1px black;
         }
-    }
-
-    span{
-        display: block;
-        font-size: 20px;
-        color: hsl(200, 50%, 30%);
     }
 
 }
@@ -282,24 +238,77 @@ header{
     }
 }
 
+// --------------------------------
+// --------------------------------
 
-// span{
-//     font-family: 'Nanum Gothic Coding', monospace;
-// }
+.a-button{
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    color: hsl(200, 50%, 30%);
+    border: solid 1px hsl(200, 50%, 30%);
+    font-size: 20px;
 
-
-p{
-    font-family: 'PT Sans Narrow', sans-serif;
+    &:hover{
+        color:hsl(200, 50%, 90%);
+        background-color: hsl(200, 50%, 30%);
+    }
 }
 
-a{
-    font-family: 'PT Sans Narrow', sans-serif;
+.h1-site{
+    color: hsl(200, 50%, 90%);
+    font-size: 90px;
+    margin: 1rem 0rem;
+
+    &:before {
+        content: '<h1>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    &:after {
+        content: '</h1>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
 }
 
-h1{
-    font-family: 'Oswald', sans-serif;
+.p-tags{
+    color: hsl(200, 50%, 90%);
+    font-size: 20px;
+    margin: 1rem 0rem;
+
+    &:before {
+        content: '<p>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    &:after {
+        content: '</p>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
 }
 
-h2{
-    font-family: 'Oswald', sans-serif;
+.h2-site{
+    color: hsl(200, 50%, 90%);
+    font-size: 30px;
+
+    &:before {
+        content: '<h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
+    
+    &:after {
+        content: '</h2>';
+        display: block;
+        color: hsl(200, 50%, 30%);
+        font-size: 16px;
+    }
 }
